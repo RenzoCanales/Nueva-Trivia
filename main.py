@@ -29,7 +29,7 @@ lista1 = []
 while iniciartrivia == True:
     Intento += 1
     print("\nIntento numero:", Intento)
-    puntaje = random.randint(0, 11)
+    puntaje = random.randint(1, 11)
     print(AZUL + "\nTienes", puntaje, "puntos para empezar\n" + RESET)
     print(CYAN + "Mucha suerte y que empieze la trivia:\n" + RESET)
     for cuenta in range(0, 6, +1):
@@ -53,14 +53,14 @@ while iniciartrivia == True:
             "Debes responder a, b, c o d. Ingresa nuevamente tu respuesta: ")
     respuestacorrecta = respuestacorrecta.lower()
     if respuestacorrecta == "a":
-        aleatorio = random.randint(0, 11)
+        aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
               " Debes estudiar más sobre el Espacio\n" + RESET)
         print("Tu puntaje actual es de", puntaje, "puntos\n")
     elif respuestacorrecta == "b":
-        aleatorio = random.randint(0, 11)
+        aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
@@ -74,7 +74,7 @@ while iniciartrivia == True:
               "!\n \nTu puntaje a aumentado en", aleatorio, "puntos" + RESET)
         print(AZUL + "\nTu puntaje actual es de", puntaje, "puntos\n" + RESET)
     else:
-        aleatorio = random.randint(0, 11)
+        aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre, "Te pasaste de alternativa\n" + RESET)
@@ -98,7 +98,7 @@ while iniciartrivia == True:
     respuestacorrecta = respuestacorrecta.lower()
 
     if respuestacorrecta == "a":
-        aleatorio = random.randint(0, 11)
+        aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
@@ -106,7 +106,7 @@ while iniciartrivia == True:
         print("Tu puntaje actual es de", puntaje, "puntos\n")
 
     elif respuestacorrecta == "b":
-        aleatorio = random.randint(0, 11)
+        aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
@@ -128,7 +128,7 @@ while iniciartrivia == True:
         puntaje += random.randint(20, 101)
         print(AZUL + "\nTu puntaje es de", puntaje, "puntos\n" + RESET)
     else:
-        aleatorio = random.randint(0, 11)
+        aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre, "Te pasaste de alternativa\n" + RESET)
@@ -152,7 +152,7 @@ while iniciartrivia == True:
     respuestacorrecta = respuestacorrecta.lower()
 
     if respuestacorrecta == "a":
-        aleatorio = random.randint(0, 11)
+        aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
@@ -160,7 +160,7 @@ while iniciartrivia == True:
         print("Tu puntaje actual es de", puntaje, "puntos\n")
 
     elif respuestacorrecta == "c":
-        aleatorio = random.randint(0, 11)
+        aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
@@ -174,7 +174,7 @@ while iniciartrivia == True:
               "!\n \nTu puntaje a aumentado en", aleatorio, "puntos" + RESET)
         print(AZUL + "\nTu puntaje actual es de", puntaje, "puntos\n" + RESET)
     else:
-        aleatorio = random.randint(0, 11)
+        aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre, "Te pasaste de alternativa\n" + RESET)
