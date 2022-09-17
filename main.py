@@ -184,6 +184,7 @@ while iniciartrivia == True:
 
     time.sleep(3)
     print("4) En que pais cayo el meteorito que mato a todos los dinosaurios?")
+    print("\nA continuacion veras una pregunta IMPORTANTE, Si respondes correctamente tus puntos se veran multiplicados y si lamentablemente tu respuesta es erronea seras PERJUDICADO, ¡Ten Cuidado!")
 
     #OPCIONES DE PREGUNTA DIFICIL
 
