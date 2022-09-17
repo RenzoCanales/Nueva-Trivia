@@ -27,8 +27,11 @@ print(
 iniciartrivia = True
 Intento = 0
 lista1 = []
+
 while iniciartrivia == True:
     Intento += 1
+    perdidas=0
+    ganancias=0
     print("\nIntento numero:", Intento)
     puntaje = random.randint(1, 11)
     print(AZUL + "\nTienes", puntaje, "puntos para empezar\n" + RESET)
@@ -55,6 +58,7 @@ while iniciartrivia == True:
     respuestacorrecta = respuestacorrecta.lower()
     if respuestacorrecta == "a":
         aleatorio = random.randint(1, 11)
+        perdidas = perdidas+aleatorio
         puntaje = puntaje - aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
@@ -63,6 +67,7 @@ while iniciartrivia == True:
     elif respuestacorrecta == "b":
         aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
+        perdidas = perdidas+aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
               " Debes estudiar más sobre el Espacio\n" + RESET)
@@ -71,12 +76,14 @@ while iniciartrivia == True:
     elif respuestacorrecta == "c":
         aleatorio = random.randint(5, 11)
         puntaje = puntaje + aleatorio
+        ganancias = ganancias+aleatorio
         print(VERDE + "\nMuy bien".upper(), nombre,
               "!\n \nTu puntaje a aumentado en", aleatorio, "puntos" + RESET)
         print(AZUL + "\nTu puntaje actual es de", puntaje, "puntos\n" + RESET)
     else:
         aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
+        perdidas = perdidas+aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre, "Te pasaste de alternativa\n" + RESET)
         print("Tu puntaje actual es de", puntaje, "puntos\n")
@@ -101,6 +108,7 @@ while iniciartrivia == True:
     if respuestacorrecta == "a":
         aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
+        perdidas = perdidas+aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
               "Debes estudiar mas sobre el Espacio\n" + RESET)
@@ -109,6 +117,7 @@ while iniciartrivia == True:
     elif respuestacorrecta == "b":
         aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
+        perdidas = perdidas+aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
               "Sigue intentando te faltan pocas alternativas\n" + RESET)
@@ -117,6 +126,7 @@ while iniciartrivia == True:
     elif respuestacorrecta == "d":
         aleatorio = random.randint(5, 11)
         puntaje = puntaje + aleatorio
+        ganancias = ganancias+aleatorio
         print(VERDE + "\nMuy bien".upper(), nombre,
               "!\n \nTu puntaje a aumentado en", aleatorio, "puntos" + RESET)
         print(AZUL + "\nTu puntaje actual es de", puntaje, "puntos\n" + RESET)
@@ -131,6 +141,7 @@ while iniciartrivia == True:
     else:
         aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
+        perdidas = perdidas+aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre, "Te pasaste de alternativa\n" + RESET)
         print("Tu puntaje actual es de", puntaje, "puntos\n")
@@ -155,6 +166,7 @@ while iniciartrivia == True:
     if respuestacorrecta == "a":
         aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
+        perdidas = perdidas+aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
               "Debes estudiar mas sobre el Espacio\n" + RESET)
@@ -163,6 +175,7 @@ while iniciartrivia == True:
     elif respuestacorrecta == "c":
         aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
+        perdidas = perdidas+aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre,
               "Sigue intentando te faltan pocas alternativas\n" + RESET)
@@ -171,12 +184,14 @@ while iniciartrivia == True:
     elif respuestacorrecta == "b":
         aleatorio = random.randint(5, 11)
         puntaje = puntaje + aleatorio
+        ganancias = ganancias+aleatorio
         print(VERDE + "\nMuy bien".upper(), nombre,
               "!\n \nTu puntaje a aumentado en", aleatorio, "puntos" + RESET)
         print(AZUL + "\nTu puntaje actual es de", puntaje, "puntos\n" + RESET)
     else:
         aleatorio = random.randint(1, 11)
         puntaje = puntaje - aleatorio
+        perdidas = perdidas+aleatorio
         print(ROJO + "\nIncorrecto!", "Tu puntaje a disminuido en", aleatorio,
               "puntos\n\n", nombre, "Te pasaste de alternativa\n" + RESET)
         print("Tu puntaje actual es de", puntaje, "puntos\n")
@@ -234,10 +249,14 @@ while iniciartrivia == True:
         VERDE +
         "\nResponder con un si, si deseas repetir la trivia, o cualquier tecla si deseas terminarla:"
         + RESET).lower()
+    
     lista1.append(puntaje)
     if repetirtrivia == "si":
         print("\nGENIAL! Intentemoslo otra vez", nombre)
         iniciartrivia = True
+        print("\nEstos fueron tus puntos perdidos:",perdidas)
+        print("\nEstos fueron tus puntos ganados:",ganancias)
+        time.sleep(7)
         os.system("clear")
     else:  #DESPEDIDA DE MI TRIVIA
         print(VERDE + "\nEspero te haya gustado mi Trivia", nombre,
