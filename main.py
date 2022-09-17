@@ -1,3 +1,4 @@
+import os
 import random
 import time
 
@@ -237,6 +238,7 @@ while iniciartrivia == True:
     if repetirtrivia == "si":
         print("\nGENIAL! Intentemoslo otra vez", nombre)
         iniciartrivia = True
+        os.system("clear")
     else:  #DESPEDIDA DE MI TRIVIA
         print(VERDE + "\nEspero te haya gustado mi Trivia", nombre,
               "Vuelve pronto" + RESET)
